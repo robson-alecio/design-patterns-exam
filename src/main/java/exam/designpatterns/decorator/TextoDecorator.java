@@ -9,6 +9,11 @@ public abstract class TextoDecorator {
 	}
 
 	public String processar(String texto) {
-		return null;
+		String textoProcessado = texto;
+		if(decorator != null) {
+			textoProcessado = decorator.processar(texto);
+		}
+		return textoProcessado;
 	}
+
 }
