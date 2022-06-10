@@ -11,8 +11,13 @@ public class Publicacao {
 		state = new Rascunho(this);
 	}
 
+	public void setState(State state) {
+		this.state = state;
+	}
+	
 	public void avancar() {
-
+       //this.state = new Revisao(this);
+		this.state = this.getState().proximoState();
 	}
 
 	public State getState() {
@@ -24,6 +29,14 @@ public class Publicacao {
 	}
 
 	void setTexto(String texto) {
-		this.texto = texto;
+		//if((this.getClass().isInstance(Publicado.class))) {
+	    //}
+		if(this.getState().editar(texto)) {
+			this.texto = texto;
+		}
+		
+		
+		
+		
 	}
 }

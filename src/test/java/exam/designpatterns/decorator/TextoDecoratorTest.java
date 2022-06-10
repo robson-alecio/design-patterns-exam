@@ -14,6 +14,8 @@ class TextoDecoratorTest {
 
 		String resultado = tudoMaiusculaDecorator.processar("uma frase legal");
 		assertThat(resultado).isEqualTo("TEXTO: **UMA FRASE LEGAL**");
+		
+		
 	}
 
 	@Test
