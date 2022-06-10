@@ -25,3 +25,7 @@ Clique no link `compare across forks`
 
 No lado direito escolha o seu repositório e branch e submeta
 ![img_5.png](img_5.png)
+
+# Importante
+
+Somente serão aceitos Pull requests criados até dia 12/06/2022.
