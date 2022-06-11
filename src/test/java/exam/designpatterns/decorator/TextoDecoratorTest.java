@@ -4,7 +4,24 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.Objects;
+
 class TextoDecoratorTest {
+	
+
+	private TextoDecoratorTest deco;
+	
+	public TextoDecoratorTest(TextoDecoratorTest deco) {
+		this.deco = deco;
+	}
+
+	public String process(String text) {
+		String textTreated = text;
+		if(Objects.nonNull(deco)) {
+			textTreated = deco.process(text);
+		}
+		return textTreated;
+	}
 
 	@Test
 	public void combinacaoUm() {

@@ -2,7 +2,7 @@ package exam.designpatterns.state;
 
 public class Rascunho extends State {
 
-	public Rascunho(Publicacao publicacao) {
+	public Rascunho(PublicacaoTest publicacao) {
 		super(publicacao);
 	}
 

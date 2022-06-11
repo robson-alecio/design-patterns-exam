@@ -5,6 +5,12 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class PublicacaoTest {
+	
+	private State state;
+	
+	private String texto;
+	
+	
 
 	@Test
 	public void editarPublicacaoEmRascunho() {
@@ -57,6 +63,32 @@ class PublicacaoTest {
 		publicacao.setTexto("gato é legal");
 		assertThat(publicacao.getState()).isInstanceOf(Revisao.class);
 		assertThat(publicacao.getTexto()).isEqualTo("cachorro é legal");
+	}
+	
+	public PublicacaoTest(String texto) {
+		this.texto = texto;
+		state = new Rascunho(this);
+	}
+	
+	public void avancar() {
+		state = state.proximoState();
+	}
+
+	public State getState() {
+		return state;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setText(String texto) {
+		if(this.state.editar(texto)) {
+			this.texto = texto;
+		}
+		if(this.state instanceof Publicado) {
+			state = new Revisao(this);
+		}
 	}
 
 }
