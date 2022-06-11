@@ -13,7 +13,7 @@ public abstract class TextoDecorator {
 
 	public String processar(String texto) {
 		//return this.decorator.toString();
-		if(Objects.nonNull(decorator)) {
+		if(decorator != null) {
 			texto = decorator.processar(texto);
 		}
 		return texto;

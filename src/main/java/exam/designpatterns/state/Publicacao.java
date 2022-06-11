@@ -35,6 +35,11 @@ public class Publicacao {
 			this.texto = texto;
 		}
 		
+		/*comando para mudar o state para revisao caso faça uma edição no publicado conforme o que 
+		 * esta no teste "naoEditarPublicacaoPublicada()"**/
+		if(this.getState() instanceof Publicado ) {
+			this.state = new Revisao(this);
+		}
 		
 		
 		
