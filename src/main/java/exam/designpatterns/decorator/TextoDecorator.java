@@ -8,7 +8,11 @@ public abstract class TextoDecorator {
 		this.decorator = decorator;
 	}
 
-	public String processar(String texto) {
-		return null;
-	}
+	public String processar(String texto){
+		String textoImplementado = texto;
+		if(Objects.nonNull(decorator)) {
+			textoImplementado = decorator.processar(texto);
+		}
+		return textoImplementado;
+	}; 
 }
