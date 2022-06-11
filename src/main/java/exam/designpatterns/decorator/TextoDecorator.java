@@ -1,14 +1,15 @@
 package exam.designpatterns.decorator;
 
-public abstract class TextoDecorator {
+public abstract class TextoDecorator extends Texto {
 
-	private TextoDecorator decorator;
+	private final Texto textoDecorador;
 
-	public TextoDecorator(TextoDecorator decorator) {
-		this.decorator = decorator;
+	public TextoDecorator(Texto textoDecorador) {
+		this.textoDecorador = textoDecorador;
 	}
 
+	@Override
 	public String processar(String texto) {
-		return null;
+		return textoDecorador.processar(texto);
 	}
 }

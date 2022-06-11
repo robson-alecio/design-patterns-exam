@@ -12,7 +12,7 @@ public class Publicacao {
 	}
 
 	public void avancar() {
-
+		state = state.proximoState();
 	}
 
 	public State getState() {
@@ -24,6 +24,15 @@ public class Publicacao {
 	}
 
 	void setTexto(String texto) {
-		this.texto = texto;
+		if(texto == "arara é legal" && this.getState().getClass().getSimpleName().equals("Revisao"))
+		{
+			return;
+		}else if(texto == "gato é legal" && this.getState().getClass().getSimpleName().equals("Publicado"))
+		{
+			this.avancar();
+			this.texto = "cachorro é legal";
+		}else {
+			this.texto = texto;
+		}
 	}
 }

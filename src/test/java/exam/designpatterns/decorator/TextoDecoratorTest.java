@@ -8,7 +8,7 @@ class TextoDecoratorTest {
 
 	@Test
 	public void combinacaoUm() {
-		var negritoDecorator = new NegritoDecorator(null);
+		var negritoDecorator = new NegritoDecorator(new Texto());
 		var labelDecorator = new LabelDecorator(negritoDecorator, "Texto");
 		var tudoMaiusculaDecorator = new TudoMaiusculaDecorator(labelDecorator);
 
@@ -18,7 +18,7 @@ class TextoDecoratorTest {
 
 	@Test
 	public void combinacaoDois() {
-		var tudoMaiusculaDecorator = new TudoMaiusculaDecorator(null);
+		var tudoMaiusculaDecorator = new TudoMaiusculaDecorator(new Texto());
 		var labelDecorator = new LabelDecorator(tudoMaiusculaDecorator, "Texto");
 		var negritoDecorator = new NegritoDecorator(labelDecorator);
 
