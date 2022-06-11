@@ -12,6 +12,7 @@ public class Publicacao {
 	}
 
 	public void avancar() {
+		state = state.proximoState();
 
 	}
 
@@ -24,6 +25,11 @@ public class Publicacao {
 	}
 
 	void setTexto(String texto) {
-		this.texto = texto;
+		if(this.state.editar(texto)){
+			this.texto = texto;
+		}
+		if(this.state instanceof Publicado){
+			state = new Revisao(this);
+		}
 	}
 }
