@@ -2,7 +2,7 @@ package exam.designpatterns.state;
 
 public abstract class State {
 
-	private Publicacao publicacao;
+	protected Publicacao publicacao;
 
 	public State(Publicacao publicacao) {
 		this.publicacao = publicacao;
