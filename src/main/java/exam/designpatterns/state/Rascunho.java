@@ -7,12 +7,12 @@ public class Rascunho extends State {
 	}
 
 	@Override
-	protected boolean editar(String texto) {
+	protected boolean editar(String text) {
 		return false;
 	}
 
 	@Override
 	public State proximoState() {
-		return null;
+		return new Revisao(super.publicacao);
 	}
 }

@@ -4,10 +4,10 @@ public class Publicacao {
 
 	private State state;
 
-	private String texto;
+	private String text;
 
-	public Publicacao(String texto) {
-		this.texto = texto;
+	public Publicacao(String text) {
+		this.text = text;
 		state = new Rascunho(this);
 	}
 
@@ -20,10 +20,14 @@ public class Publicacao {
 	}
 
 	public String getTexto() {
-		return texto;
+		return text;
 	}
 
-	void setTexto(String texto) {
-		this.texto = texto;
+	void setTexto(String text) {
+		if(this.state.editar(text))
+			this.text = text;
+		
+		if(this.state instanceof Publicado) 
+			state = new Revisao(this);
 	}
 }
