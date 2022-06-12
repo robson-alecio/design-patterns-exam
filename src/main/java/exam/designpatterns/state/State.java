@@ -1,4 +1,4 @@
-package exam.designpatterns.state;
+package designpatterns.state;
 
 public abstract class State {
 
@@ -7,8 +7,7 @@ public abstract class State {
 	public State(Publicacao publicacao) {
 		this.publicacao = publicacao;
 	}
-
 	protected abstract boolean editar(String texto);
-
+	
 	public abstract State proximoState();
 }
