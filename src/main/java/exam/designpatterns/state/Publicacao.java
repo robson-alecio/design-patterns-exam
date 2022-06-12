@@ -1,4 +1,4 @@
-package exam.designpatterns.state;
+package designpatterns.state;
 
 public class Publicacao {
 
@@ -8,7 +8,7 @@ public class Publicacao {
 
 	public Publicacao(String texto) {
 		this.texto = texto;
-		state = new Rascunho(this);
+		state = new Teste(this);
 	}
 
 	public void avancar() {
@@ -25,5 +25,6 @@ public class Publicacao {
 
 	void setTexto(String texto) {
 		this.texto = texto;
+
 	}
 }
