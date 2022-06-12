@@ -1,7 +1,7 @@
-package exam.designpatterns.decorator;
+package designpatterns.decorator;
 
-public class TudoMaiusculaDecorator extends TextoDecorator {
-	public TudoMaiusculaDecorator(TextoDecorator decorator) {
+public class TextMaiusculaDecorator extends DecoratorText {
+	public TextMaiusculaDecorator(DecoratorText decorator) {
 		super(decorator);
 	}
 }
