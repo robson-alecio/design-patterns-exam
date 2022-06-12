@@ -1,6 +1,8 @@
 package exam.designpatterns.state;
 
 public class Publicado extends State {
+	
+	private Publicacao publicacao;
 
 	public Publicado(Publicacao publicacao) {
 		super(publicacao);
@@ -13,6 +15,6 @@ public class Publicado extends State {
 
 	@Override
 	public State proximoState() {
-		return null;
+		return (new Revisao(publicacao));
 	}
 }
