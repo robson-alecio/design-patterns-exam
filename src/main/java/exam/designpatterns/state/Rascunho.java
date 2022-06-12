@@ -8,7 +8,7 @@ public class Rascunho extends State {
 
 	@Override
 	protected boolean editar(String text) {
-		return false;
+		return true;
 	}
 
 	@Override
