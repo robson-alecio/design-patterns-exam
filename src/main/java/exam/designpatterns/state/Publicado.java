@@ -8,7 +8,7 @@ public class Publicado extends State {
 
 	@Override
 	protected boolean editar(String text) {
-		return true;
+		return false;
 	}
 
 	@Override
