@@ -12,7 +12,7 @@ public class Publicacao {
 	}
 
 	public void avancar() {
-
+		state = state.proximoState();
 	}
 
 	public State getState() {
@@ -24,6 +24,8 @@ public class Publicacao {
 	}
 
 	void setTexto(String texto) {
-		this.texto = texto;
+		if(state.editar(texto))
+			this.texto = texto;
 	}
+	
 }

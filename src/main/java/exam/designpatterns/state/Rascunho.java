@@ -8,11 +8,12 @@ public class Rascunho extends State {
 
 	@Override
 	protected boolean editar(String texto) {
-		return false;
+		return true;
 	}
 
 	@Override
 	public State proximoState() {
-		return null;
+		return new Revisao(publicacao);
 	}
+	
 }

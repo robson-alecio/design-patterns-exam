@@ -15,4 +15,5 @@ public class Publicado extends State {
 	public State proximoState() {
 		return null;
 	}
+	
 }

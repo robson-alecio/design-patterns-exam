@@ -11,7 +11,7 @@ class TextoDecoratorTest {
 		var negritoDecorator = new NegritoDecorator(null);
 		var labelDecorator = new LabelDecorator(negritoDecorator, "Texto");
 		var tudoMaiusculaDecorator = new TudoMaiusculaDecorator(labelDecorator);
-
+		
 		String resultado = tudoMaiusculaDecorator.processar("uma frase legal");
 		assertThat(resultado).isEqualTo("TEXTO: **UMA FRASE LEGAL**");
 	}
@@ -25,4 +25,5 @@ class TextoDecoratorTest {
 		String resultado = negritoDecorator.processar("uma frase legal");
 		assertThat(resultado).isEqualTo("**Texto: UMA FRASE LEGAL**");
 	}
+	
 }
