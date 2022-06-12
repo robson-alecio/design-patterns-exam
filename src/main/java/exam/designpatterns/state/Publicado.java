@@ -1,8 +1,8 @@
-package exam.designpatterns.state;
+package designpatterns.state;
 
-public class Publicado extends State {
+public class Published extends State {
 
-	public Publicado(Publicacao publicacao) {
+	public Published(Publicacao publicacao) {
 		super(publicacao);
 	}
 
