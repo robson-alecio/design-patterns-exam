@@ -27,7 +27,7 @@ public class Publicacao {
 		if(this.state.editar(texto)) {
 			this.texto = texto;
 		}
-
+		//por favor ler o comentario que eu deixei no ultimo teste do state
 		if(this.state instanceof Publicado) {
 			state = new Revisao(this);
 		}
