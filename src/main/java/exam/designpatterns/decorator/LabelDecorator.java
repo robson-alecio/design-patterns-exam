@@ -8,5 +8,9 @@ public class LabelDecorator extends TextoDecorator {
 		super(decorator);
 		this.label = label;
 	}
+	@Override
+	public String processar(String texto) {
+		return this.label + ": " + super.processar(texto);
+	}
 
 }
