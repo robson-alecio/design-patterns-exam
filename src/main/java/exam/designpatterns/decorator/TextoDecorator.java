@@ -1,13 +1,12 @@
-package exam.designpatterns.decorator;
+package designpatterns.decorator;
 
-public abstract class TextoDecorator {
+public abstract class DecoratorText {
 
-	private TextoDecorator decorator;
+	private DecoratorText decorator;
 
-	public TextoDecorator(TextoDecorator decorator) {
+	public DecoratorText(DecoratorText decorator) {
 		this.decorator = decorator;
 	}
-
 	public String processar(String texto) {
 		return null;
 	}
