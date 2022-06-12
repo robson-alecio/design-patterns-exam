@@ -1,10 +1,10 @@
-package exam.designpatterns.decorator;
+package designpatterns.decorator;
 
-public class LabelDecorator extends TextoDecorator {
+public class LabelDecorator extends DecoratorText {
 
 	private String label;
 
-	public LabelDecorator(TextoDecorator decorator, String label) {
+	public LabelDecorator(DecoratorText decorator, String label) {
 		super(decorator);
 		this.label = label;
 	}
