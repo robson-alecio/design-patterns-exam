@@ -1,8 +1,11 @@
-package exam.designpatterns.decorator;
+package designpatterns.decorator;
 
-public class NegritoDecorator extends TextoDecorator {
+public class DecoratorEmNegrito extends DecoratorText {
 
-	public NegritoDecorator(TextoDecorator decorator) {
+	public DecoratorEmNegrito(DecoratorText decorator) {
 		super(decorator);
+	}
+	public String processar(String text) {
+		return "**" + super.processar(text) + "**";
 	}
 }
