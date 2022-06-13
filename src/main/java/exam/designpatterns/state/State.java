@@ -11,4 +11,8 @@ public abstract class State {
 	protected abstract boolean editar(String texto);
 
 	public abstract State proximoState();
+
+	public Publicacao getPublicacao() {
+		return publicacao;
+	}
 }

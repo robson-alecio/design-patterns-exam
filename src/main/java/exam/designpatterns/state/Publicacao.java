@@ -12,18 +12,27 @@ public class Publicacao {
 	}
 
 	public void avancar() {
-
+		state = state.proximoState();
 	}
 
 	public State getState() {
 		return state;
 	}
-
+	
 	public String getTexto() {
 		return texto;
 	}
 
-	void setTexto(String texto) {
-		this.texto = texto;
+	public void setTexto(String texto) {
+		if(this.state.editar(texto)){
+			this.texto = texto;
+		} else {
+			setRevisaoState(texto);
+		}
+	}	
+	
+	public void setRevisaoState(String texto) {
+		state = new Revisao(this);
 	}
+
 }
